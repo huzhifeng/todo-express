@@ -24,4 +24,6 @@ block content
             |.&nbsp;
         div.name.completed-task
           span.name=task.name + ' (Completed at: ' + moment(task.completeTime).format("YYYY/MM/DD") + ')'
+        div.delete
+          a(class='btn btn-danger btn-xs task-delete', data-task-id=task._id.toString(), data-csrf=locals._csrf) delete
 
